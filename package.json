@@ -18,7 +18,7 @@
     "react-dom": "^19.1.0",
     "react-router": "^7.6.1",
     "tailwindcss": "^4.1.8",
-    "zephyr-rspack-plugin": "0.0.50"
+    "zephyr-rspack-plugin": "0.0.0-canary-20250529190441"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

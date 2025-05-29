@@ -70,7 +70,7 @@ export default withZephyr()({
         "react-dom": { singleton: true, requiredVersion: "^18.0.0" },
         "react-router": { singleton: true }
       },
-      dts: false,
+      dts: false
     }),
     isDev ? new ReactRefreshRspackPlugin() : null
   ].filter(Boolean),
@@ -80,7 +80,8 @@ export default withZephyr()({
       new rspack.LightningCssMinimizerRspackPlugin({
         minimizerOptions: { targets }
       })
-    ]
+    ],
+    runtimeChunk: false
   },
   experiments: {
     css: true
