@@ -1,0 +1,33 @@
+{
+  "name": "@tractor/header",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rspack build",
+    "check": "biome check --write",
+    "dev": "rspack dev",
+    "format": "biome format --write",
+    "preview": "rspack preview"
+  },
+  "dependencies": {
+    "@module-federation/enhanced": "^0.14.3",
+    "@tailwindcss/postcss": "^4.1.8",
+    "postcss": "^8.5.4",
+    "postcss-loader": "^8.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8",
+    "zephyr-rspack-plugin": "0.0.50"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@rspack/cli": "^1.3.12",
+    "@rspack/core": "^1.3.12",
+    "@rspack/plugin-react-refresh": "^1.4.3",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "react-refresh": "^0.17.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
