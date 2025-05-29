@@ -1,4 +1,4 @@
-import { ModuleFederationPlugin } from "@module-federation/enhanced";
+import { ModuleFederationPlugin } from "@module-federation/enhanced/rspack";
 import { rspack } from "@rspack/core";
 import { ReactRefreshRspackPlugin } from "@rspack/plugin-react-refresh";
 import { withZephyr } from "zephyr-rspack-plugin";
@@ -9,6 +9,9 @@ const isDev = process.env.NODE_ENV === "development";
 const targets = ["last 2 versions", "> 0.2%", "not dead", "Firefox ESR"];
 
 export default withZephyr()({
+  output: {
+    publicPath: "auto"
+  },
   entry: {
     main: "./src/main.tsx"
   },
@@ -56,13 +59,19 @@ export default withZephyr()({
     new rspack.HtmlRspackPlugin({
       template: "./index.html"
     }),
-		new ModuleFederationPlugin({
-			name: "@tractor/header",
-			filename: "remoteEntry.js",
-			exposes: {
-				"./Module": "./src/App.tsx"
-			}
-		}),
+    new ModuleFederationPlugin({
+      name: "tractor_header",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Module": "./src/App.tsx"
+      },
+      shared: {
+        react: { singleton: true, requiredVersion: "^18.0.0" },
+        "react-dom": { singleton: true, requiredVersion: "^18.0.0" },
+        "react-router": { singleton: true }
+      },
+      dts: false,
+    }),
     isDev ? new ReactRefreshRspackPlugin() : null
   ].filter(Boolean),
   optimization: {

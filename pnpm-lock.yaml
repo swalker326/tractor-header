@@ -26,12 +26,15 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
+      react-router:
+        specifier: ^7.6.1
+        version: 7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       tailwindcss:
         specifier: ^4.1.8
         version: 4.1.8
       zephyr-rspack-plugin:
-        specifier: 0.0.50
-        version: 0.0.50(@swc/helpers@0.5.17)(webpack@5.99.9)
+        specifier: 0.0.48
+        version: 0.0.48(@swc/helpers@0.5.17)(webpack@5.99.9)
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.9.4
@@ -1065,6 +1068,10 @@ packages:
     resolution: {integrity: sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w==}
     engines: {node: '>= 0.6'}
 
+  cookie@1.0.2:
+    resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
+    engines: {node: '>=18'}
+
   cookies@0.9.1:
     resolution: {integrity: sha512-TG2hpqe4ELx54QER/S3HQ9SRVnQnGBtKUz5bLQWtYAQ+o6GpgMs6sYUvaiJjVxb+UXwhRhAEP3m7LbsIZ77Hmw==}
     engines: {node: '>= 0.8'}
@@ -2003,6 +2010,16 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
+  react-router@7.6.1:
+    resolution: {integrity: sha512-hPJXXxHJZEsPFNVbtATH7+MMX43UDeOauz+EAU4cgqTn7ojdI9qQORqS8Z0qmDlL1TclO/6jLRYUEtbWidtdHQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
@@ -2115,6 +2132,9 @@ packages:
   serve-static@1.16.2:
     resolution: {integrity: sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==}
     engines: {node: '>= 0.8.0'}
+
+  set-cookie-parser@2.7.1:
+    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
 
   setprototypeof@1.1.0:
     resolution: {integrity: sha512-BvE/TwpZX4FXExxOxZyRGQQv651MSwmWKZGqvmPcRIjDqWub67kTKuIMx43cZZrS/cBBzwBcNDWoFxt2XEFIpQ==}
@@ -2518,17 +2538,17 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zephyr-agent@0.0.50:
-    resolution: {integrity: sha512-p2Y0ab9AyuLlL9dU7pYJiWyAHdmQaZnTX9ZQjr20M3Z+tCkODGW7NriXViFRfk4ScOVNOJIbMpqCrO6JILiEzw==}
+  zephyr-agent@0.0.48:
+    resolution: {integrity: sha512-ejrrd7Cw1vMMBgOfEU9BSdP+Mw8wQ5MLuMmUASmI5bgMWAb9A9o8PMlIXazLxq7WVnLqVigdwCwhtI+E2zWZ6w==}
 
-  zephyr-edge-contract@0.0.50:
-    resolution: {integrity: sha512-cJqPNn/9CG14kYSBC/g3oV5s2Mt6w1H+Ew5f9PmFVpyZYuzUa0xCtQHSQBtIM/6bGcbZRaweC38Q/EKxL4D/NA==}
+  zephyr-edge-contract@0.0.48:
+    resolution: {integrity: sha512-kuMakZeJJK4Sg6wtj4UhaQYTNbxTUEkJ9+VF7wTVzbd/9+oQFidOpIQOqpkWQoO7EQWdzhSi877rxqttgjScMg==}
 
-  zephyr-rspack-plugin@0.0.50:
-    resolution: {integrity: sha512-sDitpBnsqaa3/LAheTfpyzgNCxlHY2AJDZNSMHFSVPmYmrLahPRUAE3Gm1CFTuHaNR+xT1h0H2fpp6kTY9gOzQ==}
+  zephyr-rspack-plugin@0.0.48:
+    resolution: {integrity: sha512-SzUBuKYQJb6Qb0sLNhTgj4gla6/7aW3ovj9G50RqXiIYC0RlTgbUsZlvL3Goasq0Cs9pKLkl+epMuXBjHoyWAg==}
 
-  zephyr-xpack-internal@0.0.50:
-    resolution: {integrity: sha512-loWOjt+EIKusYMWCnovYPeXjPsflk/O4hqeP9UgaWsVZeFJJ9ouSRbMLuTDFtstnfMGOtt2deMSJE6lvgYZxdA==}
+  zephyr-xpack-internal@0.0.48:
+    resolution: {integrity: sha512-d1X+yadNDi3+Wu8LEI1eGzoQSGs2XXWtN8p8WrH0QCuw5yob9ePlxcPgQIBaHkhxnezxHCTqdVPO5xo3eCEh5g==}
 
 snapshots:
 
@@ -3583,6 +3603,8 @@ snapshots:
 
   cookie@0.7.1: {}
 
+  cookie@1.0.2: {}
+
   cookies@0.9.1:
     dependencies:
       depd: 2.0.0
@@ -4478,6 +4500,14 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
+  react-router@7.6.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      cookie: 1.0.2
+      react: 19.1.0
+      set-cookie-parser: 2.7.1
+    optionalDependencies:
+      react-dom: 19.1.0(react@19.1.0)
+
   react@19.1.0: {}
 
   readable-stream@2.3.8:
@@ -4611,6 +4641,8 @@ snapshots:
       send: 0.19.0
     transitivePeerDependencies:
       - supports-color
+
+  set-cookie-parser@2.7.1: {}
 
   setprototypeof@1.1.0: {}
 
@@ -5027,7 +5059,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zephyr-agent@0.0.50:
+  zephyr-agent@0.0.48:
     dependencies:
       axios: 1.9.0(debug@4.4.1)
       axios-retry: 4.5.0(axios@1.9.0)
@@ -5042,25 +5074,25 @@ snapshots:
       socket.io-client: 4.8.1
       tslib: 2.8.1
       uuid: 8.3.2
-      zephyr-edge-contract: 0.0.50
+      zephyr-edge-contract: 0.0.48
     transitivePeerDependencies:
       - bufferutil
       - encoding
       - supports-color
       - utf-8-validate
 
-  zephyr-edge-contract@0.0.50:
+  zephyr-edge-contract@0.0.48:
     dependencies:
       tslib: 2.8.1
 
-  zephyr-rspack-plugin@0.0.50(@swc/helpers@0.5.17)(webpack@5.99.9):
+  zephyr-rspack-plugin@0.0.48(@swc/helpers@0.5.17)(webpack@5.99.9):
     dependencies:
       '@module-federation/automatic-vendor-federation': 1.2.1(webpack@5.99.9)
       '@rspack/core': 1.2.8(@swc/helpers@0.5.17)
       is-ci: 4.1.0
       tslib: 2.8.1
-      zephyr-agent: 0.0.50
-      zephyr-xpack-internal: 0.0.50(webpack@5.99.9)
+      zephyr-agent: 0.0.48
+      zephyr-xpack-internal: 0.0.48(webpack@5.99.9)
     transitivePeerDependencies:
       - '@rspack/tracing'
       - '@swc/helpers'
@@ -5070,13 +5102,13 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  zephyr-xpack-internal@0.0.50(webpack@5.99.9):
+  zephyr-xpack-internal@0.0.48(webpack@5.99.9):
     dependencies:
       '@module-federation/automatic-vendor-federation': 1.2.1(webpack@5.99.9)
       is-ci: 4.1.0
       tslib: 2.8.1
-      zephyr-agent: 0.0.50
-      zephyr-edge-contract: 0.0.50
+      zephyr-agent: 0.0.48
+      zephyr-edge-contract: 0.0.48
     transitivePeerDependencies:
       - bufferutil
       - encoding
